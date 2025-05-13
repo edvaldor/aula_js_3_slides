@@ -174,4 +174,4 @@ Crie uma página HTML com:
 
 - Este conteúdo é parte integrante da disciplina e será utilizado para avaliação.
 - Entregas fora do prazo terão descontos na nota.
-- Em caso de dúvidas, contate o professor ou utilize o grupo da turma.
+- Em caso de dúvidas, contate o professor ou utilize o Clasrooom.

@@ -120,16 +120,94 @@ const config = { tema: "claro" };
 config.tema = "escuro"; // ✅ Pode alterar propriedade</pre>
   <p><strong>Dica:</strong> use <code>const</code> como padrão e apenas <code>let</code> quando precisar mudar o valor.</p>
 </div>
+<div class="slide">
+  <img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" />
+  <h2>Mais sobre <code>let</code></h2>
+  <ul>
+    <li><strong>let</strong> é usado para declarar variáveis com <u>escopo de bloco</u>.</li>
+    <li>Ao contrário de <code>var</code>, o <code>let</code> respeita blocos como <code>if</code>, <code>for</code> e <code>while</code>.</li>
+    <li>Pode ser atualizado, mas <strong>não pode ser redeclarado</strong> no mesmo escopo.</li>
+  </ul>
+  <pre>// Exemplo de escopo com let
+let idade = 18;
+if (true) {
+  let idade = 25;
+  console.log(idade); // 25 (escopo interno)
+}
+console.log(idade); // 18 (escopo externo)</pre>
+  <p><strong>Resumo:</strong> Use <code>let</code> quando o valor precisar mudar, mas sempre prefira <code>const</code> quando possível.</p>
+</div>
 <div class="slide"><img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" /><h2>Operadores e Expressões</h2><pre>let a = 10 + 5; // 15
 let b = 10 > 5; // true
 let c = true && false; // false</pre></div>
+
+
+
+
+
+
 <div class="slide"><img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" /><h2>Funções</h2><pre>function saudacao(nome) {
   alert("Olá, " + nome);
 }</pre></div>
+
+<div class="slide">
+  <img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" />
+  <h2>Aprofundando: Funções em JavaScript</h2>
+  <ul>
+    <li>Funções são blocos reutilizáveis de código que executam tarefas específicas.</li>
+    <li>Podem ter parâmetros (entradas) e retornar valores (saídas).</li>
+    <li>Existem <strong>funções declaradas</strong>, <strong>expressões de função</strong> e <strong>arrow functions</strong>.</li>
+  </ul>
+  <pre>// Declarada
+function saudacao(nome) {
+  return "Olá, " + nome;
+}
+
+// Expressão
+const soma = function(a, b) {
+  return a + b;
+};
+
+// Arrow function
+const dobro = x => x * 2;
+  </pre>
+</div>
+
 <div class="slide"><img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" /><h2>Manipulação de Elementos</h2><pre>document.getElementById("meuTexto").innerText = "Novo texto";</pre></div>
+
+<div class="slide">
+  <img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" />
+  <h2>Aprofundando: Manipulação do DOM</h2>
+  <ul>
+    <li>DOM é a representação da estrutura da página HTML em objetos JavaScript.</li>
+    <li>Permite acessar e modificar conteúdo, estrutura e estilo de forma dinâmica.</li>
+    <li>Principais métodos:</li>
+  </ul>
+  <pre>document.getElementById("id");
+document.querySelector(".classe");
+document.querySelectorAll("div");</pre>
+  <p>Você pode alterar textos, classes, atributos e estilos diretamente.</p>
+</div>
+
 <div class="slide"><img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" /><h2>Manipulação de Eventos</h2><pre>document.getElementById("meuBotao").onclick = function() {
   alert("Botão clicado!");
 }</pre></div>
+
+<div class="slide">
+  <img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" />
+  <h2>Aprofundando: Eventos</h2>
+  <ul>
+    <li>Eventos permitem responder a ações do usuário: cliques, teclas, movimentos etc.</li>
+    <li>Uso comum: <code>onclick</code>, <code>onmouseover</code>, <code>onkeyup</code>.</li>
+    <li>Boas práticas: usar <code>addEventListener</code>.</li>
+  </ul>
+  <pre>// Exemplo moderno:
+document.getElementById("botao").addEventListener("click", function() {
+  alert("Você clicou!");
+});
+  </pre>
+</div>
+
 <div class="slide"><img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" /><h2>Exemplo Prático</h2><p>Crie um botão que, ao ser clicado, muda o texto de um parágrafo.</p><pre>&lt;button onclick="mudarTexto()"&gt;Clique&lt;/button&gt;
 &lt;p id="demo"&gt;Texto original&lt;/p&gt;
 &lt;script&gt;
@@ -156,6 +234,17 @@ function mudarTexto() {
     <li>MDN Web Docs – <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">developer.mozilla.org</a></li>
     <li>W3Schools – <a href="https://www.w3schools.com/js/">w3schools.com/js/</a></li>
   </ul>
+</div>
+<div class="slide">
+  <img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" />
+  <h2>📘 Material Extra no GitHub</h2>
+  <p>Este conteúdo está documentado com explicações completas no repositório oficial da aula:</p>
+  <p><strong>README.md</strong> com teoria, exemplos e instruções de publicação.</p>
+  <p>Acesse:</p>
+  <p><a href="https://edvaldor.github.io/aula_js_3_slides/" target="_blank">https://edvaldor.github.io/aula_js_3_slides/</a></p>
+  <p>Repositório GitHub:</p>
+  <p><a href="https://github.com/edvaldor/aula_js_3_slides/blob/main/README.md" target="_blank">/aula_js_3_slides/README.md</a></p>
+  <p>💡 Aproveite esse material como apoio para revisar o conteúdo da aula e orientar o exercício prático.</p>
 </div>
 
 <div id="navigator">
@@ -194,73 +283,5 @@ showSlide(current);
 </script>
 </body>
 </html>
-<div class="slide">
-  <img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" />
-  <h2>Mais sobre <code>let</code></h2>
-  <ul>
-    <li><strong>let</strong> é usado para declarar variáveis com <u>escopo de bloco</u>.</li>
-    <li>Ao contrário de <code>var</code>, o <code>let</code> respeita blocos como <code>if</code>, <code>for</code> e <code>while</code>.</li>
-    <li>Pode ser atualizado, mas <strong>não pode ser redeclarado</strong> no mesmo escopo.</li>
-  </ul>
-  <pre>// Exemplo de escopo com let
-let idade = 18;
-if (true) {
-  let idade = 25;
-  console.log(idade); // 25 (escopo interno)
-}
-console.log(idade); // 18 (escopo externo)</pre>
-  <p><strong>Resumo:</strong> Use <code>let</code> quando o valor precisar mudar, mas sempre prefira <code>const</code> quando possível.</p>
-</div>
 
-<div class="slide">
-  <img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" />
-  <h2>Aprofundando: Funções em JavaScript</h2>
-  <ul>
-    <li>Funções são blocos reutilizáveis de código que executam tarefas específicas.</li>
-    <li>Podem ter parâmetros (entradas) e retornar valores (saídas).</li>
-    <li>Existem <strong>funções declaradas</strong>, <strong>expressões de função</strong> e <strong>arrow functions</strong>.</li>
-  </ul>
-  <pre>// Declarada
-function saudacao(nome) {
-  return "Olá, " + nome;
-}
-
-// Expressão
-const soma = function(a, b) {
-  return a + b;
-};
-
-// Arrow function
-const dobro = x => x * 2;
-  </pre>
-</div>
-
-<div class="slide">
-  <img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" />
-  <h2>Aprofundando: Manipulação do DOM</h2>
-  <ul>
-    <li>DOM é a representação da estrutura da página HTML em objetos JavaScript.</li>
-    <li>Permite acessar e modificar conteúdo, estrutura e estilo de forma dinâmica.</li>
-    <li>Principais métodos:</li>
-  </ul>
-  <pre>document.getElementById("id");
-document.querySelector(".classe");
-document.querySelectorAll("div");</pre>
-  <p>Você pode alterar textos, classes, atributos e estilos diretamente.</p>
-</div>
-
-<div class="slide">
-  <img src="https://edronet.com/logos-aulas/unipar-logo.png" alt="Logo UNIPAR" class="logo" />
-  <h2>Aprofundando: Eventos</h2>
-  <ul>
-    <li>Eventos permitem responder a ações do usuário: cliques, teclas, movimentos etc.</li>
-    <li>Uso comum: <code>onclick</code>, <code>onmouseover</code>, <code>onkeyup</code>.</li>
-    <li>Boas práticas: usar <code>addEventListener</code>.</li>
-  </ul>
-  <pre>// Exemplo moderno:
-document.getElementById("botao").addEventListener("click", function() {
-  alert("Você clicou!");
-});
-  </pre>
-</div>
 
